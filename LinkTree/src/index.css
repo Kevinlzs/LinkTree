@@ -28,6 +28,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --card: #f4f4f4;
+  --card-border: rgba(0,0,0,0.08);
+  --sub: rgba(0,0,0,0.5);
+  --arrow: rgba(0,0,0,0.3);
+  --body-bg: #ffffff;
+  --profile-color: #08060d;
+
   @media (max-width: 1024px) {
     font-size: 16px;
   }
@@ -46,6 +53,12 @@
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    --card: #131418;
+    --card-border: rgba(255,255,255,0.08);
+    --sub: rgba(255,255,255,0.6);
+    --arrow: rgba(255,255,255,0.5);
+    --body-bg: #191a1a;
+    --profile-color: #ffffff;
   }
 
   #social .button-icon {
@@ -53,8 +66,42 @@
   }
 }
 
+:root.dark {
+  --text: #9ca3af;
+  --text-h: #f3f4f6;
+  --bg: #16171d;
+  --border: #2e303a;
+  --code-bg: #1f2028;
+  --accent: #c084fc;
+  --accent-bg: rgba(192, 132, 252, 0.15);
+  --accent-border: rgba(192, 132, 252, 0.5);
+  --social-bg: rgba(47, 48, 58, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  --card: #131418;
+  --card-border: rgba(255,255,255,0.08);
+  --sub: rgba(255,255,255,0.6);
+  --arrow: rgba(255,255,255,0.5);
+  --body-bg: #191a1a;
+  --profile-color: #ffffff;
+  
+}
+
+:root.light {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --card: #f4f4f4;
+  --card-border: rgba(0,0,0,0.08);
+  --sub: rgba(0,0,0,0.5);
+  --arrow: rgba(0,0,0,0.3);
+  --body-bg: #ffffff;
+  --profile-color: #08060d;
+}
+
 body {
   margin: 0;
+  background: var(--body-bg);
+  transition: background 0.3s ease;
 }
 
 #root {
